@@ -13,7 +13,7 @@ This repository contains scripts and data for the direct RNA-seq analysis descri
 ### Input:
 - fastq files
 ### Output:
-- read_chimeric_pattern.tsv
+- read_chimeric_pattern.tsv:  
 This file stores the final chimeric reads detected in the direct RNA-seq data.
 column1: chimeric pattern, could be "sh" or "hs".
 column2: read name.
