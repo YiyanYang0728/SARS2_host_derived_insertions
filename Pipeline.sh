@@ -20,7 +20,7 @@ for i in $srr; do ../extract.sh $i >> res.paf; done
 cat res.paf | cut -f 1-9 |sort -k1,1 -k3,3n -k4,4n | awk '{print $1":"$2"\t"$3"-"$4"\t"$6":"$7":"$8"-"$9"("$5")"}' | datamash -g 1 collapse 2,3 > res.tsv
 
 # 4. filter out chimeric reads whose 1) junction length >= 15bp
-# 2) junction occurrs within the last 50 nucleotides of the first gene sequence or within the first 50 nucleotides of the second gene sequence
+# 2) junction occurs within the last 50 nucleotides of the first gene sequence or within the first 50 nucleotides of the second gene sequence
 python ../filter_chimeric_read_r1.py res.tsv > res_filtered.tsv
 # mapping sample information to each read
 awk -F"\t" 'NR==FNR{a[$1]=$2;next}NR!=FNR{split($1,b,":");print a[b[1]]"\t"b[1]"\t"$(NF-1)"\t"$NF"\t"$2}' read_spl.mapping res_filtered.tsv > res_spl_read_junction.tsv
@@ -38,4 +38,4 @@ awk -F"\t" 'NR==FNR{a[$1]=$2;next}{print $0"\t"a[$1]}' read_spl.mapping res_qual
 python ../filter_chimeric_read_r2.py res_qual_spl.tsv > res_qual_spl_filtered.tsv
 
 # 8. annotate junctions with chimeric pattern (host-virus or virus-host)
-python ../get_chimeric_pattern.py res_qual_spl_filtered.tsv | sed "s/\-/\+/g" > read_chimeric_pattern.tsv
+python ../get_chimeric_pattern.py res_qual_spl_filtered.tsv | sed "s/\-/\+/g" | sed -e "s/s+h+/sh/g" -e "s/h+s+/hs/g"  > read_chimeric_pattern.tsv
