@@ -11,22 +11,20 @@ This repository contains scripts and data for the direct RNA-seq analysis descri
 
 ## Workflow
 ### Input:
-- fastq files
+#### fastq files
 ### Output:
-- read_chimeric_pattern.tsv:  
+#### read_chimeric_pattern.tsv:  
 This file stores the final chimeric reads detected in the direct RNA-seq data.
-
-column1: chimeric pattern, could be "sh" or "hs".  
-column2: read name.  
-column3: junction sites on references (ref1:position1,ref2:position2).  
-column4: junction start and end sites on read (ref1,ref2).  
-column5: selected region on read to get the averaged quality score for the junction region.  
-column6: the length of selected region on read in column 5.  
-column7: averaged quality score for the junction region.  
-column8: the percentage of the averaged quality score greater than the 1000-time simulated averaged quality score along the read.
-column9: similar to column3, but more detailed information about alignment to references (ref1:ref1_length:map_start-map_end(strand),ref2:ref2_length:map_start-map_end(strand)).  
-column10: the sample name for this read.  
-
+- column1: chimeric pattern, could be "sh" or "hs".  
+- column2: read name.  
+- column3: junction sites on references (ref1:position1,ref2:position2).  
+- column4: junction start and end sites on read (ref1,ref2).  
+- column5: selected region on read to get the averaged quality score for the junction region.  
+- column6: the length of selected region on read in column 5.  
+- column7: averaged quality score for the junction region.  
+- column8: the percentage of the averaged quality score greater than the 1000-time simulated averaged quality score along the read.  
+- column9: similar to column3, but more detailed information about alignment to references (ref1:ref1_length:map_start-map_end(strand),ref2:ref2_length:map_start-map_end(strand)).  
+- column10: the sample name for this read.  
 
 ### Steps
 - Step.1: align raw reads fastq files to references and convert to paf format.
