@@ -34,7 +34,7 @@ This file stores the final chimeric reads detected in the direct RNA-seq data.
 - Step.5: split fastq file into multiple single-read fastq files for following quality score checking.
 - Step.6: do permutation test to check if the quality score within 20 bp of either side of the junction region is higher than the 20th percentile quality score for each read.
 - Step.7: filter out chimeric reads that don't meet the demand in step 6.
-- Step.8: annotate junctions with chimeric pattern either as "hs" (short for "5'-host-virus-3' chimeric read") or "sh" (short for "5'-virus-host-3' chimeric read").
+- Step.8: annotate junctions with chimeric pattern either as "hs" (short for "5'-host-SARS2-3' chimeric read") or "sh" (short for "5'-SARS2-host-3' chimeric read").
 
 ## Usage
 ```
