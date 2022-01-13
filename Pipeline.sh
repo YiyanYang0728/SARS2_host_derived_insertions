@@ -4,14 +4,8 @@
 ######### Pipeline to detect chimeric reads #########
 #####################################################
 
-# prerequest:
-# python >=3.8
-# minimap2
-# paftools
-# NanoFilt 
-# datamash
-
-WD=./Homo_sapiens # for Chlorocebus_sabaeus please change this variable accordingly
+mode=$1
+WD=./${mode} # for Chlorocebus_sabaeus please change this variable accordingly
 cd ${WD}
 
 # 1. map fastq file to reference and convert the alignment to paf format
