@@ -1,5 +1,5 @@
 # SARS2_host_derived_insertions
-This repository contains scripts and data for the direct RNA-seq analysis described in paper "Putative host-derived insertions in the genomes of circulating SARS-CoV-2 variants" by Yiyang Yang, Keith Dufault-Thompson, Rafaela Salgado Fontenele, Xiaofang Jiang.
+This repository contains scripts and data for the direct RNA-seq analysis and generating figures described in paper "Putative host-derived insertions in the genomes of circulating SARS-CoV-2 variants" by Yiyang Yang, Keith Dufault-Thompson, Rafaela Salgado Fontenele, Xiaofang Jiang.
 
 ## Content
 1. a pipeline to detect chimeric reads from direct RNA-seq data
@@ -11,7 +11,7 @@ All codes were run and tested on Linux
 - Biopython=1.76
 - Minimap2
 - Paftools
-- NanoFilt 
+- NanoFilt
 - datamash
 - sratoolkit
 
