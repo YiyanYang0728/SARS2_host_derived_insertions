@@ -38,4 +38,7 @@ awk -F"\t" 'NR==FNR{a[$1]=$2;next}{print $0"\t"a[$1]}' read_spl.mapping res_qual
 python ../filter_chimeric_read_r2.py res_qual_spl.tsv > res_qual_spl_filtered.tsv
 
 # 8. annotate junctions with chimeric pattern (host-virus or virus-host)
-python ../get_chimeric_pattern.py res_qual_spl_filtered.tsv | sed "s/\-/\+/g" | sed -e "s/s+h+/sh/g" -e "s/h+s+/hs/g"  > read_chimeric_pattern.tsv
+python ../get_chimeric_pattern.py res_qual_spl_filtered.tsv > read_chimeric_pattern.tsv
+
+# 9. get junction sites of chimeric reads relative to SARS-CoV-2 reference
+python ../get_SARS2_insert_sites.py res_qual_spl_filtered.tsv > ${mode}_sars2_insert_start.list
