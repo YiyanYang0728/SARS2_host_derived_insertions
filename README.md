@@ -50,17 +50,15 @@ column2: chimeric pattern, could be "sh" or "hs".
 ```
 #### direct RNA-seq analysis ####
 # git repo
-git clone https://github.com/YiyanYang0728/SARS2_host_derived_insertions.git
+git clone https://github.com/ncbi/SARS2_host_derived_insertions.git
 cd SARS2_host_derived_insertions
 
 # download fastq data
 ./prepare_fastq_data.sh Homo_sapiens
 
 # for Chlorocebus_sabaeus, please run:
-# Notice: for fastq files VeroInf24h.all.fastq, CRR197323.fastq, CRR197322.fastq, 
-# CRR197321.fastq, CRR197320.fastq, CRR127517.fastq, and CRR127516.fastq, 
-# they need to be downloaded manually from https://osf.io/8f6n9/ and PRJCA002477 at https://bigd.big.ac.cn/
-./prepare_fastq_data.sh Chlorocebus_sabaeus
+# Notice: VeroInf24h.all.fastq need to be downloaded manually from https://osf.io/8f6n9/, # and CRR197323.fastq, CRR197322.fastq, CRR197321.fastq, CRR197320.fastq, CRR127517.fastq, and CRR127516.fastq need to be downloaded manually from https://bigd.big.ac.cn/ under accession number GSA:CRA002508 PRJCA002477.
+# ./prepare_fastq_data.sh Chlorocebus_sabaeus
 
 # preparing reference data into specific folder
 ./prepare_ref_data.sh Homo_sapiens
