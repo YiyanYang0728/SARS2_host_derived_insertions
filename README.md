@@ -1,9 +1,10 @@
 # SARS2_host_derived_insertions
-This repository contains scripts and data for the direct RNA-seq analysis and generating figures described in paper "Putative host-derived insertions in the genomes of circulating SARS-CoV-2 variants" by Yiyang Yang, Keith Dufault-Thompson, Rafaela Salgado Fontenele, Xiaofang Jiang.
+This repository contains scripts and data for the direct RNA-seq analysis and generating figures described in paper "Putative host-derived insertions in the genomes of circulating SARS-CoV-2 variants" by Yiyan Yang, Keith Dufault-Thompson, Rafaela Salgado Fontenele, Xiaofang Jiang.
 
 ## Content
 1. a pipeline to detect chimeric reads from direct RNA-seq data
-2. codes to generate Figures
+2. a custom script to verify insertion with raw sequencing data
+3. codes to generate Figures
 
 ## Prerequisites
 All codes were run and tested on Linux
@@ -15,13 +16,14 @@ All codes were run and tested on Linux
 - datamash
 - sratoolkit
 
-## Workflow
+## Workflow for direct RNA-seq analysis
 ### Input:
 #### fastq files
+
 ### Output:
 #### 1. read_chimeric_pattern.tsv:  
 This file stores the final chimeric reads detected in the direct RNA-seq data.
-- column1: chimeric pattern, could be "sh" or "hs".  
+- column1: chimeric pattern, could be "sh" or "hs" (sh: SARS2-host chimeria; hs: host-SARS2 chimera). 
 - column2: read name.  
 - column3: junction sites on references (ref1:position1,ref2:position2).  
 - column4: junction start and end sites on read (ref1,ref2).  
@@ -74,6 +76,9 @@ cd SARS2_host_derived_insertions
 # for Chlorocebus_sabaeus, please run:
 # ./Pipeline.sh Chlorocebus_sabaeus
 
+#### verify insertion with raw sequencing data ####
+
+
 #### generate figures ####
 cd Figure1
 Rscript --vanilla plot_figure1.R
@@ -84,5 +89,5 @@ Rscript --vanilla plot_figure2.R
 
 ## Citation
 Putative host-derived insertions in the genome of circulating SARS-CoV-2 variants
-Yiyang Yang, Keith Dufault-Thompson, Rafaela Salgado Fontenele, Xiaofang Jiang
+Yiyan Yang, Keith Dufault-Thompson, Rafaela Salgado Fontenele, Xiaofang Jiang
 bioRxiv 2022.01.04.474799; doi: https://doi.org/10.1101/2022.01.04.474799
