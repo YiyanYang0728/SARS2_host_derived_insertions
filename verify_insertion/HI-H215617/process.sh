@@ -1,5 +1,5 @@
 #!/bin/bash
-module load bowtie bedtools bedops samtools
+module load bowtie/2-2.4.4 bedtools/2.30.0 bedops/2.4.40 samtools/1.14
 
 bamfile=H215617_trimmed_filtered.sorted.bam
 
