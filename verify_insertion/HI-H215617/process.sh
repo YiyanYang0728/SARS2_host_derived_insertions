@@ -20,5 +20,6 @@ python ../insertion_match_reads.py w_insert.extract.bowtie2.xeq.tsv wo_insert.ex
 
 # get reads exclusively aligned to the consensus genome with the insertion
 awk '$NF=="w_insert"' assign_label.reads > w_insert.reads
+
 # get reads exclusively aligned to the consensus genome without the insertion
 awk '$NF=="wo_insert"' assign_label.reads > wo_insert.reads

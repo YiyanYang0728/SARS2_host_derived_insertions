@@ -77,7 +77,21 @@ cd SARS2_host_derived_insertions
 # ./Pipeline.sh Chlorocebus_sabaeus
 
 #### verify insertion with raw sequencing data ####
+cd verify_insertion/WA-PHL-005726_data
+./process.sh &> log
+# get reads number
+w_insert_read_ct=$(awk 'END{print NR}' w_insert.reads)
+echo "reads exclusively aligned to the consensus genome with the insertion: ${w_insert_read_ct}"
+wo_insert_read_ct=$(awk 'END{print NR}' wo_insert.reads)
+echo "reads exclusively aligned to the consensus genome without the insertion: ${wo_insert_read_ct}"
 
+cd verify_insertion/HI-H215617
+./process.sh &> log
+# get reads number
+w_insert_read_ct=$(awk 'END{print NR}' w_insert.reads)
+echo "reads exclusively aligned to the consensus genome with the insertion: ${w_insert_read_ct}"
+wo_insert_read_ct=$(awk 'END{print NR}' wo_insert.reads)
+echo "reads exclusively aligned to the consensus genome without the insertion: ${wo_insert_read_ct}"
 
 #### generate figures ####
 cd Figure1

@@ -14,10 +14,10 @@
 # Notice: Reads 1) mapped to both references with full match and 2) mapped to both references all with mismatch/indel in given regions
 # will be discarded.
 
-import sys, os, re
+import sys, re
 
 def variant_in_region(start_pos, cigar, insert_type="w_insert"):
-    # for wo_insert, varaint cannot be >= 7121 and <= 7122
+    # for wo_insert, varaint cannot be >= 7117 and <= 7122
     if insert_type == "wo_insert":
         given_region = list(range(7117, 7122+1))
     # for w_insert, varaint cannot be >= 7121 and <= 7149
