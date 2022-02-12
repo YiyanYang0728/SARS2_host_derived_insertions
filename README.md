@@ -106,5 +106,5 @@ Putative host-derived insertions in the genome of circulating SARS-CoV-2 variant
 Yiyan Yang, Keith Dufault-Thompson, Rafaela Salgado Fontenele, Xiaofang Jiang
 bioRxiv 2022.01.04.474799; doi: https://doi.org/10.1101/2022.01.04.474799
 
-## Acknowledgement
+## Acknowledgements
 We would like to thank Sofya K. Garushyants and Eugene V. Koonin for their code on how to perform permutation tests and plot the results provided at [covid_insertions_paper](https://github.com/garushyants/covid_insertions_paper) which was adjusted and used in this project.
