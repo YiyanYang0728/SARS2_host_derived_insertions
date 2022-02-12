@@ -105,3 +105,6 @@ Rscript --vanilla plot_figure2.R
 Putative host-derived insertions in the genome of circulating SARS-CoV-2 variants
 Yiyan Yang, Keith Dufault-Thompson, Rafaela Salgado Fontenele, Xiaofang Jiang
 bioRxiv 2022.01.04.474799; doi: https://doi.org/10.1101/2022.01.04.474799
+
+## Acknowledgement
+We would like to thank Sofya K. Garushyants and Eugene V. Koonin for their code on how to perform permutation tests and plot the results provided in [covid_insertions_paper](https://github.com/garushyants/covid_insertions_paper) used in this project.
