@@ -1,0 +1,2 @@
+awk -F"\t" 'NR==FNR{a[$2]=$4;next}NR!=FNR{print "SARS2\t"$1"\t"$1"\tJunction_"FNR"."$2"\t"a[$1]}' background.RNA_struct.annot.bed <(sort -k1,1n Homo_sapiens_sars2_insert_start.list) > human.chimeric_junction.RNA_struct.annot.bed
+awk -F"\t" 'NR==FNR{a[$2]=$4;next}NR!=FNR{print "SARS2\t"$1"\t"$1"\tJunction_"FNR"."$2"\t"a[$1]}' background.RNA_struct.annot.bed <(sort -k1,1n Chlorocebus_sabaeus_sars2_insert_start.list) > monkey.chimeric_junction.RNA_struct.annot.bed

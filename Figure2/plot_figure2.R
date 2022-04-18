@@ -91,6 +91,6 @@ p1 <- get_boxplot("human", "Caco_cell", "Homo sapiens Caco-2 cell line")
 p2 <- get_boxplot("human", "Calu_cell", "Homo sapiens Calu-3 cell line")
 p3 <- get_boxplot("monkey", "Vero_cell", "Chlorocebus sabaeus Vero-6 cell line")
 
-pdf("Figure2.pdf", width=22, height=12)
+pdf("Figure2.pdf", family="ArialMT", width=22, height=12)
 p1 + p2 + p3 + plot_layout(widths = c(2, 2, 3))
 dev.off()
